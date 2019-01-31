@@ -1,0 +1,60 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-searchbar placeholder="O que você procura?" showCancelButton debounce="500" animated>
+      </ion-searchbar>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-img src="https://forbes.uol.com.br/wp-content/uploads/2018/09/compra-8-800x530-800x530.jpg"></ion-img>
+  </ion-card>
+
+  <div padding style="text-align:center;">
+    <p style="width:50%;margin-left: auto;margin-right: auto;">o meu desejo é ter um...</p>
+
+    <!-- <div padding style="width:100%;margin-left: auto;margin-right: auto;">
+    <p *ngFor="let link of links" style="float:left;width: auto;margin-left: 1.8em;">
+      <ion-text color="medium">
+        <ion-badge color="medium" class="desejos">
+          {{link}}
+        </ion-badge>
+      </ion-text>
+
+    </p>
+  </div> -->
+
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col *ngFor="let link of linha1">
+          <ion-badge color="medium">
+            {{link}}
+          </ion-badge>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col *ngFor="let link of linha2">
+          <ion-badge color="medium">
+            {{link}}
+          </ion-badge>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col *ngFor="let link of linha3">
+          <ion-badge color="medium">
+            {{link}}
+          </ion-badge>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col *ngFor="let link of linha4">
+          <ion-badge color="medium">
+            {{link}}
+          </ion-badge>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </div>
+</ion-content>

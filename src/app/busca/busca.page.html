@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-searchbar placeholder="O que você procura?" showCancelButton debounce="500" animated>
+    </ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <!-- List of Input Items -->
+  <ion-list>
+    <!-- <ion-list-header>
+      <ion-label>{{items.length}}</ion-label>
+    </ion-list-header> -->
+    <ion-item *ngFor="let item of items">
+      <ion-thumbnail slot="start">
+        <img [src]="item.imagem">
+      </ion-thumbnail>
+      <ion-label>{{item.descricao}}</ion-label>
+      <ion-badge slot="end">{{item.valor | currency:'BRL'}}</ion-badge>
+    </ion-item>
+  </ion-list>
+  <!-- <ion-card *ngFor="let item of items">
+    <ion-card-header>
+      <ion-card-title>{{item.valor}}</ion-card-title>
+    </ion-card-header>
+    <ion-img [src]="item.imagem"></ion-img>
+    <ion-card-content>
+      {{item.descricao}}
+    </ion-card-content>
+  </ion-card> -->
+</ion-content>
